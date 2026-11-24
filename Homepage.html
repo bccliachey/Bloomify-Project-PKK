@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloomify</title>
+    <link rel="stylesheet" href="Homepage Style.CSS">
+</head>
+
+<main>
+    <!-- PRODUCT DETAIL POPUP -->
+<div class="product-modal" id="productModal">
+    <div class="product-detail">
+
+        <button class="close-modal" id="closeModal" aria-label="Close">
+            &times;
+        </button>
+
+        <div class="detail-image">
+            <img id="detailImage" src="" alt="Product image">
+        </div>
+
+        <div class="detail-content">
+            <p class="detail-type" id="detailType"></p>
+            <h2 id="detailName"></h2>
+            <p class="detail-description" id="detailDescription"></p>
+            <p class="detail-price" id="detailPrice"></p>
+
+            <h3>Choose Your Flowers</h3>
+
+            <div class="flower-row">
+                <span>Yellow — Rp15.000/stem</span>
+                <div class="quantity">
+                    <button type="button" class="minus">−</button>
+                    <span class="quantity-value">0</span>
+                    <button type="button" class="plus">+</button>
+                </div>
+            </div>
+
+            <div class="flower-row">
+                <span>Pink — Rp18.000/stem</span>
+                <div class="quantity">
+                    <button type="button" class="minus">−</button>
+                    <span class="quantity-value">0</span>
+                    <button type="button" class="plus">+</button>
+                </div>
+            </div>
+
+            <div class="flower-row">
+                <span>White — Rp22.000/stem</span>
+                <div class="quantity">
+                    <button type="button" class="minus">−</button>
+                    <span class="quantity-value">0</span>
+                    <button type="button" class="plus">+</button>
+                </div>
+            </div>
+
+            <p class="minimum">Minimum 3 stems</p>
+
+            <div class="detail-bottom">
+                <strong id="totalPrice"></strong>
+                <button type="button" class="add-to-cart" id="addToCart">
+                    Add to Cart
+                </button>
+            </div>
+
+            <p id="cartMessage" class="cart-message"></p>
+        </div>
+    </div>
+</div>
+</main>
+
+<body>
+
+    <header class="navbar">
+
+        <a href="#" class="logo">
+            Bloomify
+        </a>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#products">Shop</a></li>
+                <li><a href="#">Cart</a></li>
+                <li><a href="Account.html">Account</a></li>
+            </ul>
+        </nav>
+
+        <div class="nav-actions">
+
+            <a href="#" aria-label="Search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </a>
+
+            <a href="#" aria-label="Shopping Bag">
+                <i class="fa-solid fa-bag-shopping"></i>
+            </a>
+
+            <a href="#" aria-label="Account">
+                <i class="fa-regular fa-user"></i>
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <p class="hero-small-text">
+                    
+                </p>
+
+                <h1>
+                    Flowers For Every
+                    <span>Moment.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Contact +62 856 9167 4330 | bloomifies@gmail.com |
+                    @bloomifies on Instagram and Twitter
+                </p>
+
+                <a href="#products" class="hero-button">
+                    Explore Flowers
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+
+            <div class="hero-image">
+
+                <img src="Flower.png"
+                     alt="Beautiful Bloomify flower bouquet">
+
+            </div>
+
+        </section>
+
+
+        <section class="products" id="products">
+
+            <div class="products-heading">
+
+                <p>OUR COLLECTION</p>
+
+                <h2>
+                    Bloomify's Bouquet
+                </h2>
+
+            </div>
+
+
+            <div class="product-grid">
+
+
+                <!-- BQ 1 -->
+
+                <article class="product-card"
+    data-name="Harmonies"
+    data-type="Hand Bouquet"
+    data-price="0"
+    data-image="Lily.jpeg"
+    data-description="A beautiful lily bouquet for meaningful moments.">
+
+                    <div class="product-image">
+
+                        <span class="product-tag">
+                            Best Seller
+                        </span>
+
+                        <button class="wishlist"
+                                aria-label="Add to wishlist">
+
+                            <b class="fa-regular fa-heart">♡</b>
+
+                        </button>
+
+                        <img src="Lily.jpeg"
+                             alt="Lily">
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <p class="product-type">
+                            Hand Bouquet
+                        </p>
+
+                        <h3>
+                            Harmonies
+                        </h3>
+
+                        <div class="product-bottom">
+
+                            <span class="price">
+                                Rp15.000
+                            </span>
+
+                            <button class="add-cart"
+                                    aria-label="Add to cart">
+
+                                <i class="fa-solid fa-plus">+</i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- BQ 2 -->
+
+                <article class="product-card">
+
+                    <div class="product-image">
+
+                        <button class="wishlist"
+                                aria-label="Add to wishlist">
+
+                            <b class="fa-regular fa-heart">♡</b>
+
+                        </button>
+
+                        <img src="Rose.jpeg"
+                             alt="Rose">
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <p class="product-type">
+                            Hand Bouquet
+                        </p>
+
+                        <h3>
+                            Rose Amour
+                        </h3>
+
+                        <div class="product-bottom">
+
+                            <span class="price">
+                                Rp175.000
+                            </span>
+
+                            <button class="add-cart"
+                                    aria-label="Add to cart">
+
+                                <i class="fa-solid fa-plus">+</i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- BQ 3 -->
+
+                <article class="product-card">
+
+                    <div class="product-image">
+
+                        <span class="product-tag">
+                            New
+                        </span>
+
+                        <button class="wishlist"
+                                aria-label="Add to wishlist">
+
+                            <b class="fa-regular fa-heart">♡</b>
+
+                        </button>
+
+                        <img src="Peony.jpeg"
+                             alt="Peony">
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <p class="product-type">
+                            Hand Bouquet
+                        </p>
+
+                        <h3>
+                            Ivory Puff
+                        </h3>
+
+                        <div class="product-bottom">
+
+                            <span class="price">
+                                Rp190.000
+                            </span>
+
+                            <button class="add-cart"
+                                    aria-label="Add to cart">
+
+                                <i class="fa-solid fa-plus">+</i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- BQ 4 -->
+
+                <article class="product-card">
+
+                    <div class="product-image">
+
+                        <button class="wishlist"
+                                aria-label="Add to wishlist">
+
+                            <b class="fa-regular fa-heart">♡</b>
+
+                        </button>
+
+                        <img src="FB A.jpeg"
+                             alt="Rose Peony Box">
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <p class="product-type">
+                            Flower Box
+                        </p>
+
+                        <h3>
+                            Elodie Blush
+                        </h3>
+
+                        <div class="product-bottom">
+
+                            <span class="price">
+                                Rp1.500.000
+                            </span>
+
+                            <button class="add-cart"
+                                    aria-label="Add to cart">
+
+                                <i class="fa-solid fa-plus">+</i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- BQ 5 -->
+
+                <article class="product-card">
+
+                    <div class="product-image">
+
+                        <span class="product-tag">
+                            Popular
+                        </span>
+
+                        <button class="wishlist"
+                                aria-label="Add to wishlist">
+
+                            <b class="fa-regular fa-heart">♡</b>
+
+                        </button>
+
+                        <img src="Relios.jpeg"
+                             alt="Mixed Flowers (Exclusive)">
+
+                    </div>
+
+                    <div class="product-info">  
+
+                        <p class="product-type">
+                            Mixed Flower
+                        </p>
+
+                        <h3>
+                            Amara Relios
+                        </h3>
+
+                        <div class="product-bottom">
+
+                            <span class="price">
+                                From Rp50.000
+                            </span>
+
+                            <button class="add-cart"
+                                    aria-label="Add to cart">
+
+                                <i class="fa-solid fa-plus">+</i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- BQ 6 -->
+
+                <article class="product-card">
+
+                    <div class="product-image">
+
+                        <button class="wishlist"
+                                aria-label="Add to wishlist">
+
+                            <b class="fa-regular fa-heart">♡</b>
+
+                        </button>
+
+                        <img src=""
+                             alt="abcd">
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <p class="product-type">
+                            Flower Box
+                        </p>
+
+                        <h3>
+                            abcd
+                        </h3>
+
+                        <div class="product-bottom">
+
+                            <span class="price">
+                                Rp200.000
+                            </span>
+
+                            <button class="add-cart"
+                                    aria-label="Add to cart">
+
+                                <i class="fa-solid fa-plus">+</i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="Homepage.js"></script>x
+
+</body>
+</html>
