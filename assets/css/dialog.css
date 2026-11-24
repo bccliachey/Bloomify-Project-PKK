@@ -1,0 +1,141 @@
+.bloomify-dialog {
+    position: fixed;
+    inset: 0;
+    z-index: 12000;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    background: rgba(64, 50, 56, 0.48);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.bloomify-dialog.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.bloomify-dialog-panel {
+    width: min(100%, 440px);
+    padding: 28px;
+    border-radius: 18px;
+    background: var(--ivory, #fffaf4);
+    box-shadow: 0 24px 70px rgba(64, 50, 56, 0.22);
+    transform: translateY(12px) scale(0.98);
+    transition: transform 0.2s ease;
+    position: relative;
+}
+
+.bloomify-dialog.show .bloomify-dialog-panel {
+    transform: translateY(0) scale(1);
+}
+
+.bloomify-dialog-panel h2 {
+    margin: 0 40px 10px 0;
+    color: var(--maroon, #7b4055);
+    font-family: inherit;
+    font-size: 22px;
+    line-height: 1.25;
+}
+
+.bloomify-dialog-panel p {
+    margin: 0;
+    color: var(--text, #403238);
+    line-height: 1.65;
+}
+
+.bloomify-dialog-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 16px;
+}
+
+.bloomify-dialog-field label {
+    color: var(--maroon, #7b4055);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.bloomify-dialog-field textarea {
+    width: 100%;
+    min-height: 92px;
+    padding: 10px 12px;
+    border: 1px solid var(--line, #eadde1);
+    border-radius: 9px;
+    background: #ffffff;
+    color: var(--text, #403238);
+    font: inherit;
+    line-height: 1.5;
+    resize: vertical;
+}
+
+.bloomify-dialog-field textarea:focus {
+    outline: none;
+    border-color: var(--pink, #c98da4);
+    box-shadow: 0 0 0 3px rgba(201, 141, 164, 0.16);
+}
+
+.bloomify-dialog-field-error {
+    color: #a33b4b;
+    font-size: 12px;
+}
+
+.bloomify-dialog-close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 34px;
+    height: 34px;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    color: var(--muted, #8a777e);
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.bloomify-dialog-close:hover {
+    background: var(--soft-pink, #f1dce5);
+    color: var(--maroon, #7b4055);
+}
+
+.bloomify-dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+.bloomify-dialog-actions .btn {
+    min-width: 106px;
+    justify-content: center;
+}
+
+body.dialog-open {
+    overflow: hidden;
+}
+
+.flash {
+    transition: opacity 0.22s ease, transform 0.22s ease;
+}
+
+.flash-leaving {
+    opacity: 0;
+    transform: translateY(-8px);
+}
+
+@media (max-width: 480px) {
+    .bloomify-dialog-panel {
+        padding: 24px 20px;
+    }
+
+    .bloomify-dialog-actions {
+        flex-direction: column-reverse;
+    }
+
+    .bloomify-dialog-actions .btn {
+        width: 100%;
+    }
+}
